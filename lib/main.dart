@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'finish.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -101,7 +102,9 @@ class _MyAppState extends State<MyApp> {
                 RaisedButton(
                   onPressed: () {
                     if (_formKey.currentState.validate()) {
-                      
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (BuildContext context) => new FinishApp()
+                      ));
                     }
                   },
                   child: Text("Submit"),
